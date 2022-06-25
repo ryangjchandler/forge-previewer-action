@@ -13,6 +13,14 @@ inputs:
   domain:
     required: true
     description: The domain name used to generate subdomains for preview environments.
+  repo:
+    # TODO: Can we pick this up automatically in the action?
+    required: true
+    description: The name of the repository the action is running on.
+  branch:
+    # TODO: Can we pick this up automatically in the action?
+    required: true
+    description: The name of the branch that the action is running on.
 
 outputs:
   site_url:
