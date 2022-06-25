@@ -1,0 +1,8 @@
+{    
+    "require": {
+        "ryangjchandler/forge-previewer": "^0.1.3"
+    },
+    "scripts": {
+        "build": "cp ./vendor/ryangjchandler/forge-previewer/builds/forge-previewer ./forge-previewer"
+    }
+}

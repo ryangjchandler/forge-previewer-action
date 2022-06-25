@@ -1,0 +1,27 @@
+name: 'Forge Previewer'
+description: 'Create preview deployments for pull requests with Laravel Forge.'
+
+author: Ryan Chandler <support@ryangjchandler.co.uk>
+
+inputs:
+  forge-token:
+    required: true
+    description: Your Forge API token.
+  server-id:
+    required: true
+    description: The Forge Server ID.
+  domain:
+    required: true
+    description: The domain name used to generate subdomains for preview environments.
+
+outputs:
+  site_url:
+    description: The automatically generated URL for your preview environment.
+
+runs:
+  using: docker
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.forge-token }}
+    - ${{ inputs.server-id }}
+    - ${{ inputs.domain }}
